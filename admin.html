@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronPeak | Admin Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+       <a href="index.html" class="logo">
+    <img src="assets/logo img1.webp" alt="">
+
+      <small>Fitness Coaching</small>
+    </a>
+
+        <div class="admin-profile">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150" alt="Admin profile">
+            <div>
+                <h4>David Wilson</h4>
+                <p>Super Admin</p>
+            </div>
+            <i class="bi bi-patch-check-fill verified"></i>
+        </div>
+
+        <p class="menu-title">MANAGEMENT</p>
+
+        <nav class="sidebar-nav">
+            <a href="#overview" class="nav-link active">
+                <i class="bi bi-grid-fill"></i> Overview
+            </a>
+
+            <a href="#members" class="nav-link">
+                <i class="bi bi-people-fill"></i> Members
+            </a>
+
+            <a href="#trainers" class="nav-link">
+                <i class="bi bi-person-video3"></i> Trainers
+            </a>
+
+            <a href="#programs" class="nav-link">
+                <i class="bi bi-trophy-fill"></i> Programs
+            </a>
+
+            <a href="#appointments" class="nav-link">
+                <i class="bi bi-calendar-check"></i> Appointments
+            </a>
+
+            <a href="#reports" class="nav-link">
+                <i class="bi bi-bar-chart-fill"></i> Reports
+            </a>
+        </nav>
+
+        <p class="menu-title">SYSTEM</p>
+
+        <nav class="sidebar-nav">
+            <a href="#settings" class="nav-link">
+                <i class="bi bi-gear-fill"></i> Settings
+            </a>
+
+            <a href="login.html" class="nav-link logout-link">
+                <i class="bi bi-box-arrow-right"></i> Logout
+            </a>
+        </nav>
+
+        <div class="sidebar-card">
+            <i class="bi bi-shield-check"></i>
+            <h3>Admin Control</h3>
+            <p>Manage your fitness community and keep everything running smoothly.</p>
+        </div>
+
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="main-content" id="overview">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle sidebar">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="welcome-text">
+                <span>ADMIN PANEL</span>
+                <h1>Dashboard Overview</h1>
+                <p>Welcome back, David! Here's your gym performance.</p>
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="notification-btn" aria-label="Notifications">
+                    <i class="bi bi-bell"></i>
+                    <span></span>
+                </button>
+
+                <div class="top-admin">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100" alt="David Wilson">
+                    <div>
+                        <h4>David Wilson</h4>
+                        <p>Administrator</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ADMIN IMAGE SLIDER -->
+        <section class="admin-slider" data-aos="fade-up">
+
+            <div class="admin-slide active"
+                style="background-image:url('./assets/img13.webp')">
+
+                <div class="slide-shade"></div>
+
+                <div class="slide-content">
+                    <span class="slide-tag">IRONPEAK MANAGEMENT</span>
+                    <h2>LEAD THE TEAM.<br>INSPIRE THE CHANGE.</h2>
+                    <p>Manage your fitness center, track performance and build a stronger community.</p>
+                    <a href="404.html" class="gold-btn">Manage Members <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+            </div>
+
+            <div class="admin-slide"
+                style="background-image:url('./assets/img14.webp')">
+
+                <div class="slide-shade"></div>
+
+                <div class="slide-content">
+                    <span class="slide-tag">TRAINING MANAGEMENT</span>
+                    <h2>BUILD A STRONGER<br>FITNESS COMMUNITY.</h2>
+                    <p>Monitor training programs and help your members reach their goals.</p>
+                    <a href="404.html" class="gold-btn">View Programs <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+            </div>
+
+            <div class="admin-slide"
+                style="background-image:url('./assets/img15.webp')">
+
+                <div class="slide-shade"></div>
+
+                <div class="slide-content">
+                    <span class="slide-tag">PERFORMANCE & GROWTH</span>
+                    <h2>TRACK EVERY<br>STEP FORWARD.</h2>
+                    <p>Review your gym activity, team performance and business growth.</p>
+                    <a href="404.html" class="gold-btn">View Reports <i class="bi bi-arrow-right"></i></a>
+                </div>
+
+            </div>
+
+            <button class="slider-btn slider-prev" id="prevSlide" aria-label="Previous slide">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+
+            <button class="slider-btn slider-next" id="nextSlide" aria-label="Next slide">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+
+            <div class="slider-dots" id="sliderDots"></div>
+
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <article class="stat-card" data-aos="fade-up">
+                <div class="stat-top">
+                    <span>Total Members</span>
+                    <i class="bi bi-people-fill"></i>
+                </div>
+                <h2>2,480</h2>
+                <p><i class="bi bi-arrow-up"></i> 12.8% this month</p>
+                <div class="stat-bottom">MEMBER OVERVIEW</div>
+            </article>
+
+            <article class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stat-top">
+                    <span>Active Trainers</span>
+                    <i class="bi bi-person-video3"></i>
+                </div>
+                <h2>48</h2>
+                <p><i class="bi bi-arrow-up"></i> 5 new trainers</p>
+                <div class="stat-bottom">TRAINER OVERVIEW</div>
+            </article>
+
+            <article class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-top">
+                    <span>Total Revenue</span>
+                    <i class="bi bi-currency-rupee"></i>
+                </div>
+                <h2>₹8.5L</h2>
+                <p><i class="bi bi-arrow-up"></i> 18.4% this month</p>
+                <div class="stat-bottom">REVENUE OVERVIEW</div>
+            </article>
+
+            <article class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="stat-top">
+                    <span>Active Programs</span>
+                    <i class="bi bi-trophy-fill"></i>
+                </div>
+                <h2>32</h2>
+                <p><i class="bi bi-arrow-up"></i> 4 new programs</p>
+                <div class="stat-bottom">PROGRAM OVERVIEW</div>
+            </article>
+
+        </section>
+
+        <!-- PERFORMANCE -->
+        <section class="content-grid" id="reports">
+
+            <div class="panel performance-panel" data-aos="fade-right">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="section-label">BUSINESS ANALYTICS</span>
+                        <h2>Weekly Performance</h2>
+                    </div>
+                    <span class="period-label">THIS WEEK</span>
+                </div>
+
+                <div class="chart-summary">
+                    <h3>₹2,45,800</h3>
+                    <p>Revenue generated this week</p>
+                </div>
+
+                <div class="bar-chart">
+
+                    <div class="chart-column">
+                        <span>₹25k</span>
+                        <div class="bar" style="height:45%"></div>
+                        <small>MON</small>
+                    </div>
+
+                    <div class="chart-column">
+                        <span>₹38k</span>
+                        <div class="bar" style="height:70%"></div>
+                        <small>TUE</small>
+                    </div>
+
+                    <div class="chart-column">
+                        <span>₹30k</span>
+                        <div class="bar" style="height:55%"></div>
+                        <small>WED</small>
+                    </div>
+
+                    <div class="chart-column">
+                        <span>₹45k</span>
+                        <div class="bar" style="height:85%"></div>
+                        <small>THU</small>
+                    </div>
+
+                    <div class="chart-column">
+                        <span>₹35k</span>
+                        <div class="bar" style="height:65%"></div>
+                        <small>FRI</small>
+                    </div>
+
+                    <div class="chart-column">
+                        <span>₹50k</span>
+                        <div class="bar" style="height:95%"></div>
+                        <small>SAT</small>
+                    </div>
+
+                    <div class="chart-column">
+                        <span>₹22k</span>
+                        <div class="bar" style="height:40%"></div>
+                        <small>SUN</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MEMBERS DISTRIBUTION -->
+            <div class="panel distribution-panel" data-aos="fade-left">
+
+                <div class="panel-heading">
+                    <div>
+                        <span class="section-label">MEMBER ANALYTICS</span>
+                        <h2>Membership Status</h2>
+                    </div>
+                    <i class="bi bi-three-dots"></i>
+                </div>
+
+                <div class="donut-wrap">
+                    <div class="donut-chart">
+                        <div>
+                            <h3>2,480</h3>
+                            <span>Members</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="legend-list">
+                    <div><span class="legend-dot dot-one"></span> Active Members <strong>68%</strong></div>
+                    <div><span class="legend-dot dot-two"></span> New Members <strong>20%</strong></div>
+                    <div><span class="legend-dot dot-three"></span> Expired Members <strong>12%</strong></div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MEMBERS TABLE -->
+        <section class="panel table-panel" id="members" data-aos="fade-up">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="section-label">MEMBER MANAGEMENT</span>
+                    <h2>Recent Members</h2>
+                </div>
+                <a href="404.html" class="view-all">View All <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>MEMBER</th>
+                            <th>MEMBER ID</th>
+                            <th>PLAN</th>
+                            <th>JOINED DATE</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="member-info">
+                                    <img src="./assets/img13.webp" alt="Sarah">
+                                    <span>Sarah Johnson</span>
+                                </div>
+                            </td>
+                            <td>IP-1001</td>
+                            <td>Premium</td>
+                            <td>09 Nov 2026</td>
+                            <td><span class="status active-status">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="member-info">
+                                    <img src="./assets/img14.webp" alt="Michael">
+                                    <span>Michael Smith</span>
+                                </div>
+                            </td>
+                            <td>IP-1002</td>
+                            <td>Standard</td>
+                            <td>08 Nov 2026</td>
+                            <td><span class="status active-status">Active</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="member-info">
+                                    <img src="./assets/img15.webp" alt="Emma">
+                                    <span>Emma Wilson</span>
+                                </div>
+                            </td>
+                            <td>IP-1003</td>
+                            <td>Basic</td>
+                            <td>07 Nov 2026</td>
+                            <td><span class="status pending-status">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="member-info">
+                                    <img src="./assets/img16.webp" alt="Daniel">
+                                    <span>Daniel Brown</span>
+                                </div>
+                            </td>
+                            <td>IP-1004</td>
+                            <td>Premium</td>
+                            <td>06 Nov 2026</td>
+                            <td><span class="status active-status">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- TRAINERS -->
+        <section class="trainer-section" id="trainers">
+
+            <div class="section-heading" data-aos="fade-up">
+                <div>
+                    <span class="section-label">MEET YOUR TEAM</span>
+                    <h2>Top Fitness Trainers</h2>
+                    <p>Manage your professional coaching team.</p>
+                </div>
+                <a href="404.html" class="view-all">View All <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="trainer-grid">
+
+                <article class="trainer-card" data-aos="zoom-in">
+                    <div class="trainer-image">
+                        <img src="./assets/img13.webp" alt="James">
+                        <span>TOP TRAINER</span>
+                    </div>
+                    <div class="trainer-details">
+                        <h3>James Anderson</h3>
+                        <p>Strength Coach</p>
+                        <div class="trainer-meta">
+                            <span><i class="bi bi-people"></i> 120 Members</span>
+                            <span><i class="bi bi-star-fill"></i> 4.9</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="trainer-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="trainer-image">
+                        <img src="./assets/img19.webp" alt="Sarah">
+                        <span>POPULAR</span>
+                    </div>
+                    <div class="trainer-details">
+                        <h3>Sarah Williams</h3>
+                        <p>Yoga Instructor</p>
+                        <div class="trainer-meta">
+                            <span><i class="bi bi-people"></i> 95 Members</span>
+                            <span><i class="bi bi-star-fill"></i> 4.8</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="trainer-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="trainer-image">
+                        <img src="./assets/img14.webp" alt="Robert">
+                        <span>EXPERT</span>
+                    </div>
+                    <div class="trainer-details">
+                        <h3>Robert Miller</h3>
+                        <p>Cardio Specialist</p>
+                        <div class="trainer-meta">
+                            <span><i class="bi bi-people"></i> 86 Members</span>
+                            <span><i class="bi bi-star-fill"></i> 4.7</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- PROGRAMS -->
+        <section class="panel program-panel" id="programs" data-aos="fade-up">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="section-label">PROGRAM MANAGEMENT</span>
+                    <h2>Popular Fitness Programs</h2>
+                </div>
+                <a href="404.html" class="view-all">Manage Programs <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="program-grid">
+
+                <div class="program-card">
+                    <img src="./assets/img17.webp" alt="Muscle building">
+                    <div>
+                        <span>STRENGTH</span>
+                        <h3>Muscle Building</h3>
+                        <p>450 Enrolled Members</p>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <img src="./assets/img16.webp" alt="Yoga">
+                    <div>
+                        <span>WELLNESS</span>
+                        <h3>Yoga & Flexibility</h3>
+                        <p>320 Enrolled Members</p>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <img src="./assets/img18.webp" alt="Cardio">
+                    <div>
+                        <span>CARDIO</span>
+                        <h3>Fat Loss Program</h3>
+                        <p>280 Enrolled Members</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- APPOINTMENTS -->
+        <section class="panel appointments-panel" id="appointments" data-aos="fade-up">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="section-label">SCHEDULE MANAGEMENT</span>
+                    <h2>Upcoming Appointments</h2>
+                </div>
+                <a href="404.html" class="view-all">View Schedule <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <div class="appointment-row">
+                <div class="appointment-date"><strong>10</strong><span>NOV</span></div>
+                <div class="appointment-details">
+                    <h4>Personal Training Session</h4>
+                    <p>Member: Alex Morgan · Trainer: James Anderson</p>
+                </div>
+                <span class="appointment-time">09:00 AM</span>
+            </div>
+
+            <div class="appointment-row">
+                <div class="appointment-date"><strong>11</strong><span>NOV</span></div>
+                <div class="appointment-details">
+                    <h4>Fitness Assessment</h4>
+                    <p>Member: Sarah Johnson · Trainer: Sarah Williams</p>
+                </div>
+                <span class="appointment-time">11:30 AM</span>
+            </div>
+
+            <div class="appointment-row">
+                <div class="appointment-date"><strong>12</strong><span>NOV</span></div>
+                <div class="appointment-details">
+                    <h4>Cardio Training</h4>
+                    <p>Member: Michael Smith · Trainer: Robert Miller</p>
+                </div>
+                <span class="appointment-time">04:00 PM</span>
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="admin-footer">
+            <p>© <span id="currentYear"></span> Stackly Fitness. All Rights Reserved.</p>
+            <p>Admin Control Panel</p>
+        </footer>
+
+    </main>
+</div>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>

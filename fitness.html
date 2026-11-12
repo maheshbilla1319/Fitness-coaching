@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fitness | IronPeak Fitness Coaching Center</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fitness.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header" id="header">
+        <div class="container nav-wrap">
+
+            <a href="index.html" class="logo">
+                <img src="assets/logo img1.webp" alt="IronPeak Logo">
+                <small>Fitness Coaching</small>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="fitness.html" class="active">Fitness</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <a href="login.html" class="btn btn-solid nav-cta">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="burger" id="burger"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        
+<!-- ================= FITNESS HUB HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container" data-aos="fade-up">
+
+        <span class="eyebrow">
+            TRAIN SMARTER / LIVE STRONGER
+        </span>
+
+        <h1>
+            Fitness <span>Hub</span>
+        </h1>
+
+        <p>
+            Plans, calculators and a timer to use between coaching
+            sessions. Build healthy habits and achieve your fitness goals.
+        </p>
+
+    </div>
+
+</section>
+
+
+        <!-- WORKOUT PLANS -->
+        <section class="section">
+            <div class="container">
+
+                <div class="head" data-aos="fade-up">
+                    <span class="eyebrow">TRAIN WITH A PLAN</span>
+                    <h2>Weekly Workout <span>Plans</span></h2>
+                    <p>Choose your fitness level and follow a structured weekly plan.</p>
+                </div>
+
+                <div class="tabs" id="planTabs" data-aos="fade-up">
+                    <button class="tab on" data-tab="beginner">Beginner</button>
+                    <button class="tab" data-tab="intermediate">Intermediate</button>
+                    <button class="tab" data-tab="advanced">Advanced</button>
+                </div>
+
+                <!-- Beginner -->
+                <div class="plan-body on" id="beginner">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Workout</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Monday</td><td>Full Body Strength</td><td>45 min</td></tr>
+                                <tr><td>Wednesday</td><td>Walk or Light Cardio</td><td>30 min</td></tr>
+                                <tr><td>Friday</td><td>Full Body Strength</td><td>45 min</td></tr>
+                                <tr><td>Saturday</td><td>Mobility Flow</td><td>30 min</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Intermediate -->
+                <div class="plan-body" id="intermediate">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Workout</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Monday</td><td>Upper Body Push and Pull</td><td>60 min</td></tr>
+                                <tr><td>Tuesday</td><td>Lower Body</td><td>60 min</td></tr>
+                                <tr><td>Thursday</td><td>Intervals</td><td>40 min</td></tr>
+                                <tr><td>Friday</td><td>Full Body Circuit</td><td>50 min</td></tr>
+                                <tr><td>Saturday</td><td>Yoga</td><td>45 min</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Advanced -->
+                <div class="plan-body" id="advanced">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th>Workout</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Monday</td><td>Squat Focus</td><td>75 min</td></tr>
+                                <tr><td>Tuesday</td><td>Press and Pull</td><td>75 min</td></tr>
+                                <tr><td>Wednesday</td><td>Conditioning</td><td>45 min</td></tr>
+                                <tr><td>Thursday</td><td>Deadlift Focus</td><td>75 min</td></tr>
+                                <tr><td>Friday</td><td>Upper Hypertrophy</td><td>60 min</td></tr>
+                                <tr><td>Saturday</td><td>Sport or Run</td><td>60 min</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CALORIE CALCULATOR -->
+        <section class="section alt">
+            <div class="container split">
+
+                <div class="cal-content" data-aos="fade-right">
+                    <span class="eyebrow">KNOW YOUR NUMBERS</span>
+                    <h2>Daily Calorie <span>Estimate</span></h2>
+                    <p>
+                        Estimate your daily calorie needs using the
+                        Mifflin-St Jeor formula. Treat the result as a starting point.
+                    </p>
+
+                    <form id="calForm" class="bmi-form" novalidate>
+
+                        <label>
+                            Age
+                            <input type="number" id="cAge" min="14" max="90" value="28" required>
+                        </label>
+
+                        <label>
+                            Gender
+                            <select id="cSex">
+                                <option value="m">Male</option>
+                                <option value="f">Female</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Height (cm)
+                            <input type="number" id="cH" min="100" max="230" value="170" required>
+                        </label>
+
+                        <label>
+                            Weight (kg)
+                            <input type="number" id="cW" min="25" max="250" value="68" required>
+                        </label>
+
+                        <label class="full-field">
+                            Activity Level
+                            <select id="cAct">
+                                <option value="1.2">Mostly Sitting</option>
+                                <option value="1.375">Light, 1 to 3 Days</option>
+                                <option value="1.55" selected>Moderate, 3 to 5 Days</option>
+                                <option value="1.725">Hard, 6 to 7 Days</option>
+                            </select>
+                        </label>
+
+                        <button class="btn btn-solid" type="submit">
+                            <i class="bi bi-calculator"></i>
+                            Calculate Calories
+                        </button>
+
+                    </form>
+                </div>
+
+                <div class="bmi-result dark" data-aos="fade-left">
+                    <span class="result-icon"><i class="bi bi-fire"></i></span>
+                    <p>Estimated Daily Maintenance</p>
+                    <strong id="calMain">--</strong>
+                    <span id="calSub">kcal per day</span>
+                    <div class="cal-split" id="calSplit"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INTERVAL TIMER -->
+   
+<!-- ================= INTERVAL TIMER SECTION ================= -->
+
+<section class="timer-sec section">
+
+    <div class="container narrow center" data-aos="zoom-in">
+
+        <span class="eyebrow">PUSH YOUR LIMITS</span>
+
+        <h2>Interval <span>Timer</span></h2>
+
+        <p>Set your work and rest seconds, then press start.</p>
+
+        <!-- TIMER SETTINGS -->
+
+        <div class="timer-set">
+
+            <label>
+                Work (seconds)
+                <input type="number" id="tWork" value="40" min="5">
+            </label>
+
+            <label>
+                Rest (seconds)
+                <input type="number" id="tRest" value="20" min="5">
+            </label>
+
+            <label>
+                Rounds
+                <input type="number" id="tRounds" value="8" min="1">
+            </label>
+
+        </div>
+
+        <!-- TIMER CLOCK -->
+
+        <div class="clock" id="clock">00:40</div>
+
+        <p id="tState" class="t-state">Ready to Start</p>
+
+        <!-- TIMER BUTTONS -->
+
+        <div class="btn-row center">
+
+            <button class="btn btn-solid" id="tStart" type="button">
+                <i class="bi bi-play-fill"></i>
+                Start
+            </button>
+
+            <button class="btn btn-outline" id="tReset" type="button">
+                <i class="bi bi-arrow-counterclockwise"></i>
+                Reset
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- FITNESS HABITS -->
+        <section class="section">
+            <div class="container">
+
+                <div class="head" data-aos="fade-up">
+                    <span class="eyebrow">SMALL STEPS / BIG RESULTS</span>
+                    <h2>Five Habits That <span>Work</span></h2>
+                    <p>Build a healthier lifestyle with simple everyday habits.</p>
+                </div>
+
+                <div class="grid-3">
+
+                    <article class="tip" data-aos="fade-up">
+                        <span class="tip-icon"><i class="bi bi-moon-stars"></i></span>
+                        <span class="tip-number">01</span>
+                        <h3>Sleep 7 to 9 Hours</h3>
+                        <p>Recovery supports muscle repair, energy and overall well-being.</p>
+                    </article>
+
+                    <article class="tip" data-aos="fade-up" data-aos-delay="100">
+                        <span class="tip-icon"><i class="bi bi-egg-fried"></i></span>
+                        <span class="tip-number">02</span>
+                        <h3>Protein at Every Meal</h3>
+                        <p>Include a suitable protein source as part of balanced meals.</p>
+                    </article>
+
+                    <article class="tip" data-aos="fade-up" data-aos-delay="200">
+                        <span class="tip-icon"><i class="bi bi-droplet"></i></span>
+                        <span class="tip-number">03</span>
+                        <h3>Drink Water Early</h3>
+                        <p>Stay hydrated throughout the day and around your workouts.</p>
+                    </article>
+
+                    <article class="tip" data-aos="fade-up" data-aos-delay="100">
+                        <span class="tip-icon"><i class="bi bi-person-walking"></i></span>
+                        <span class="tip-number">04</span>
+                        <h3>Move Every Day</h3>
+                        <p>Make walking, stretching and regular movement part of your routine.</p>
+                    </article>
+
+                    <article class="tip" data-aos="fade-up" data-aos-delay="200">
+                        <span class="tip-icon"><i class="bi bi-calendar-check"></i></span>
+                        <span class="tip-number">05</span>
+                        <h3>Stay Consistent</h3>
+                        <p>Follow a realistic schedule and track your progress over time.</p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <div class="footer-about">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo img1.webp" alt="IronPeak Logo">
+                    <small>Fitness Coaching</small>
+                </a>
+
+                <p>
+                    Coaching that meets you where you are and builds you up
+                    from there. Strength, cardio and mobility under one roof.
+                </p>
+
+                <div class="socials">
+                    <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="404.html" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="404.html" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="fitness.html">Fitness</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Monday - Friday: 5 AM - 10 PM</li>
+                    <li>Saturday: 6 AM - 8 PM</li>
+                    <li>Sunday: 7 AM - 1 PM</li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><i class="bi bi-geo-alt"></i> 123 Fitness Street, Your City</li>
+                    <li><i class="bi bi-telephone"></i> +91 98765 43210</li>
+                    <li><i class="bi bi-envelope"></i> stackly@ironpeak.example</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <p>
+                &copy; <span id="year"></span>
+                IronPeak Fitness Coaching Center. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="to-top" id="toTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/fitness.js"></script>
+
+</body>
+</html>
