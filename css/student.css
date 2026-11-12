@@ -1,0 +1,985 @@
+/* ==============================
+   IRONPEAK FITNESS DASHBOARD
+   COLORS: DARK GREEN / GREEN / GOLD
+================================ */
+
+:root {
+    --dark: #071F1A;
+    --green: #174B38;
+    --gold: #D6A84F;
+
+    --heading: "Barlow Condensed", sans-serif;
+    --body: "DM Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--body);
+    background: var(--dark);
+    color: var(--gold);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* MAIN LAYOUT */
+
+.dashboard-wrapper {
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--dark);
+    border-right: 1px solid var(--green);
+    padding: 28px 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+
+/* LOGO */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 160px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo small {
+    display: block;
+    margin-left: -5px;
+    margin-top: 25px;
+    color: white;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+}
+
+.profile-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 25px 0;
+    margin-top: 20px;
+    border-top: 1px solid var(--green);
+    border-bottom: 1px solid var(--green);
+}
+
+.profile-mini img {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+
+.profile-mini h4 {
+    font-size: 14px;
+}
+
+.profile-mini p {
+    color: var(--gold);
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.menu-heading {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin: 28px 0 13px;
+    font-weight: 700;
+}
+
+.sidebar-nav {
+    display: grid;
+    gap: 7px;
+}
+
+.nav-link {
+    padding: 13px 14px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    transition: .3s;
+}
+
+.nav-link i {
+    font-size: 17px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background: var(--green);
+    color: var(--gold);
+    transform: translateX(4px);
+}
+
+.sidebar-bottom {
+    margin-top: 35px;
+    padding: 20px 15px;
+    background: var(--green);
+    border-radius: 9px;
+}
+
+.sidebar-bottom i {
+    font-size: 25px;
+    color: var(--gold);
+}
+
+.sidebar-bottom h3 {
+    font-family: var(--heading);
+    font-size: 22px;
+    margin: 10px 0 5px;
+}
+
+.sidebar-bottom p {
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+    margin-left: 260px;
+    padding: 0 35px;
+    min-height: 100vh;
+}
+
+.topbar {
+    min-height: 95px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--green);
+    margin-bottom: 30px;
+}
+
+.page-heading h2 {
+    font-family: var(--heading);
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.page-heading p {
+    font-size: 12px;
+    color: var(--gold);
+    margin-top: 4px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.notification-btn {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--green);
+    background: var(--green);
+    border-radius: 50%;
+    position: relative;
+    font-size: 17px;
+}
+
+.notification-btn span {
+    width: 7px;
+    height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.top-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-user img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.top-user h4 {
+    font-size: 12px;
+}
+
+.top-user p {
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+.menu-toggle {
+    display: none;
+    background: var(--green);
+    border: none;
+    border-radius: 6px;
+    width: 42px;
+    height: 42px;
+    font-size: 23px;
+}
+
+/* HERO SLIDER */
+
+.hero-slider {
+    height: 390px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    background: var(--green);
+}
+
+.slides,
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease, visibility .8s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(7,31,26,.97), rgba(7,31,26,.65), rgba(7,31,26,.12));
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    max-width: 550px;
+    z-index: 2;
+}
+
+.hero-label,
+.section-label {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.slide-content h1 {
+    font-family: var(--heading);
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: .98;
+    margin: 17px 0;
+    color: var(--gold);
+}
+
+.slide-content p {
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 410px;
+    margin-bottom: 25px;
+    color: var(--gold);
+}
+
+.gold-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 14px 22px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.gold-btn:hover {
+    background: var(--green);
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.slider-arrow {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    background: var(--dark);
+    color: var(--gold);
+    font-size: 17px;
+    transition: .3s;
+}
+
+.slider-arrow:hover {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+.prev {
+    right: 65px;
+}
+
+.next {
+    right: 17px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 22px;
+    left: 7%;
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+}
+
+.slider-dots button {
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 20px;
+    background: var(--green);
+    transition: .3s;
+}
+
+.slider-dots button.active {
+    width: 28px;
+    background: var(--gold);
+}
+
+/* STATS */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+    margin-bottom: 55px;
+}
+
+.stat-card {
+    padding: 22px 17px;
+    background: var(--green);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    transition: .3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+}
+
+.stat-icon {
+    min-width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    background: var(--dark);
+    color: var(--gold);
+    border-radius: 9px;
+    font-size: 20px;
+}
+
+.stat-card p {
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.stat-card h2 {
+    font-family: var(--heading);
+    font-size: 28px;
+}
+
+.stat-card h2 span {
+    font-family: var(--body);
+    font-size: 10px;
+}
+
+.stat-card small {
+    font-size: 10px;
+    color: var(--gold);
+}
+
+/* SECTION COMMON */
+
+.section-block {
+    margin-bottom: 60px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-family: var(--heading);
+    font-size: 32px;
+    margin-top: 7px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.view-link {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.view-link i {
+    color: var(--gold);
+    margin-left: 5px;
+}
+
+/* WORKOUT CARDS */
+
+.workout-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.workout-card {
+    background: var(--green);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.workout-card:hover {
+    transform: translateY(-7px);
+}
+
+.workout-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.workout-image img {
+    height: 100%;
+    transition: .5s;
+}
+
+.workout-card:hover img {
+    transform: scale(1.08);
+}
+
+.workout-image span {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 7px 11px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.workout-info {
+    padding: 20px;
+}
+
+.category {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.workout-info h3 {
+    font-family: var(--heading);
+    font-size: 25px;
+    margin: 9px 0;
+}
+
+.workout-info p {
+    font-size: 11px;
+    margin-bottom: 18px;
+}
+
+.workout-info p i {
+    color: var(--gold);
+}
+
+.workout-info a {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--gold);
+    padding-top: 14px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* TWO COLUMN PANELS */
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    margin-bottom: 65px;
+}
+
+.panel {
+    background: var(--green);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.panel .section-heading {
+    margin-bottom: 30px;
+}
+
+.panel .section-heading h2 {
+    font-size: 27px;
+}
+
+.progress-item {
+    margin-bottom: 25px;
+}
+
+.progress-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.progress-title strong {
+    color: var(--gold);
+}
+
+.progress-track {
+    height: 8px;
+    background: var(--dark);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-track span {
+    display: block;
+    height: 100%;
+    background: var(--gold);
+    border-radius: 20px;
+    animation: progressLoad 1.5s ease;
+}
+
+@keyframes progressLoad {
+    from { width: 0; }
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gold);
+}
+
+.schedule-date {
+    min-width: 45px;
+    height: 48px;
+    background: var(--dark);
+    display: grid;
+    place-content: center;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.schedule-date strong {
+    font-family: var(--heading);
+    font-size: 22px;
+}
+
+.schedule-date span {
+    font-size: 9px;
+}
+
+.schedule-info {
+    flex: 1;
+}
+
+.schedule-info h4 {
+    font-size: 12px;
+}
+
+.schedule-info p {
+    font-size: 10px;
+    margin-top: 5px;
+}
+
+.schedule-time {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* PROGRAM CARDS */
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.program-card {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--green);
+}
+
+.program-card img {
+    height: 100%;
+    transition: .5s;
+}
+
+.program-card:hover img {
+    transform: scale(1.1);
+}
+
+.program-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, var(--dark));
+}
+
+.program-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 23px;
+    z-index: 2;
+}
+
+.program-content span {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.program-content h3 {
+    font-family: var(--heading);
+    font-size: 29px;
+    margin: 8px 0;
+}
+
+.program-content p {
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 17px;
+}
+
+.program-content a {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+/* NUTRITION */
+
+.nutrition-banner {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    background: var(--green);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.nutrition-image {
+    min-height: 300px;
+}
+
+.nutrition-image img {
+    height: 100%;
+}
+
+.nutrition-content {
+    padding: 40px;
+    align-self: center;
+}
+
+.nutrition-content h2 {
+    font-family: var(--heading);
+    font-size: 42px;
+    line-height: 1.05;
+    margin: 13px 0;
+}
+
+.nutrition-content p {
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* FOOTER */
+
+.dashboard-footer {
+    padding: 25px 0;
+    border-top: 1px solid var(--green);
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 11px;
+}
+
+/* OVERLAY */
+
+.sidebar-overlay {
+    display: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: .35s;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(7,31,26,.85);
+        z-index: 900;
+    }
+}
+
+@media (max-width: 750px) {
+    .main-content {
+        padding: 0 20px;
+    }
+
+    .workout-grid,
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-image {
+        height: 230px;
+    }
+
+    .hero-slider {
+        height: 350px;
+    }
+
+    .slide-content {
+        left: 6%;
+        right: 6%;
+    }
+}
+
+@media (max-width: 520px) {
+    .main-content {
+        padding: 0 14px;
+    }
+
+    .topbar {
+        flex-wrap: wrap;
+        padding: 15px 0;
+        gap: 12px;
+    }
+
+    .page-heading {
+        flex: 1;
+    }
+
+    .page-heading h2 {
+        font-size: 24px;
+    }
+
+    .page-heading p {
+        font-size: 10px;
+    }
+
+    .topbar-right {
+        gap: 10px;
+    }
+
+    .top-user div {
+        display: none;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 13px 9px;
+        gap: 8px;
+    }
+
+    .stat-icon {
+        min-width: 34px;
+        height: 34px;
+        font-size: 15px;
+    }
+
+    .stat-card h2 {
+        font-size: 23px;
+    }
+
+    .stat-card p {
+        font-size: 9px;
+    }
+
+    .stat-card small {
+        font-size: 8px;
+    }
+
+    .workout-grid,
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-slider {
+        height: 390px;
+    }
+
+    .slide-content h1 {
+        font-size: 43px;
+    }
+
+    .slide-content p {
+        font-size: 11px;
+    }
+
+    .slider-arrow {
+        top: auto;
+        bottom: 15px;
+        transform: none;
+        width: 32px;
+        height: 32px;
+    }
+
+    .prev {
+        right: 55px;
+    }
+
+    .next {
+        right: 15px;
+    }
+
+    .slider-dots {
+        bottom: 27px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    .schedule-time {
+        font-size: 9px;
+    }
+
+    .nutrition-content {
+        padding: 25px;
+    }
+
+    .nutrition-content h2 {
+        font-size: 34px;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
